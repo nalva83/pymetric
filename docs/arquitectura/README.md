@@ -4,7 +4,7 @@
 
 > **Dueño de:** las decisiones técnicas de fondo y el diseño de cada concepto del sistema. Un archivo por tema.
 > **No cubre:** el alcance ni el orden → [`../prd.md`](../prd.md) · el proceso de autoría → [`../sdd/README.md`](../sdd/README.md) · la lista numerada de reglas → [`../sdd/constitucion.md`](../sdd/constitucion.md).
-> **Última revisión:** `<fecha>`
+> **Última revisión:** `2026-08-11`
 
 ---
 
@@ -33,7 +33,6 @@ docs/arquitectura/
 
 | Concepto | Archivo dueño | Reglas que numera |
 |---|---|---|
-| `<ej. modelo de datos + aislamiento por usuario>` | `<modelo-de-datos.md>` | `<#1>` |
-| `<ej. secretos y costo>` | `<integracion-llm.md>` | `<#2, #3>` |
-
-<!-- Agregá una fila por cada archivo de diseño que cree `/new-architecture`. -->
+| Stack, runtime y deploy (Next.js + Vercel, sin estado de servidor) | [`stack-y-deploy.md`](stack-y-deploy.md) | `#4` (N/A por diseño: sin efectos externos) |
+| Integración con el LLM (AI SDK + Gateway, salida estructurada, secretos, techo de gasto) | [`integracion-llm.md`](integracion-llm.md) | `#2`, `#3` |
+| Modelo de datos / no-persistencia + aislamiento por usuario | [`modelo-de-datos.md`](modelo-de-datos.md) | `#1`, `#6` |
