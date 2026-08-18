@@ -30,6 +30,8 @@ para que no se re-discutan en cada spec. Todo va a **un solo archivo**:
    tiempo (qué se eligió, qué se descartó, por qué). Lo que quede sin resolver va a la sección
    `## Abierto` del mismo archivo.
 4. **No decide alcance.** Si aparece un "¿esto entra o no?", es del PRD.
+   Si una decisión técnica es genuinamente del owner, se le sirve digerida: qué significa en
+   llano, pros y contras, y una opción sugerida según el contexto.
 5. **Salida en llano.** El archivo se escribe para que el dueño del producto lo entienda; la
    precisión fina para los agentes va en el "Anexo técnico" al final del archivo.
 

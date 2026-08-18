@@ -46,6 +46,10 @@ Una pieza está terminada cuando pasan **las 3 verificaciones, en orden**:
 "El código está escrito" **no** es terminado. Y el alcance se achica quitando piezas, **nunca**
 bajando la vara de terminado (regla de gestión, `docs/prd.md` §9).
 
+Y un milestone entero cierra con un paso humano: **"probalo vos"** — el agente deja la app
+levantada, entrega el link listo, y el owner confirma con sus ojos que lo que ve está bien.
+Recién ahí el plan se archiva.
+
 ---
 
 ## Anexo técnico (para los agentes)

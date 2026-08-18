@@ -9,10 +9,10 @@ Repositorio limpio con el **arnés de Spec-Driven Development**: el equipo de ag
 - **`docs/prd.md`** — plantilla del PRD (la completa `/new-prd`).
 - **`docs/arquitectura/`** — las decisiones técnicas (`decisiones.md`, lo crea `/new-architecture`).
 - **`docs/sdd/`** — el método: constitución + plantillas de planes (`plans/`) y specs (`specs/`).
-- **`PROGRESS.md` / `DECISIONS.md` / `QUALITY.md`** — plantillas de estado entre sesiones.
+- **`PROGRESS.md` / `DECISIONS.md`** — plantillas de estado entre sesiones.
 
 ## Cómo arrancar
 
-1. Contale la idea al agente y corré **`/new-prd <idea>`**.
+1. Corré **`/empezar`** (o directo **`/new-prd <idea>`** si ya tenés la idea clara).
 2. Seguí el flujo: `/new-architecture` → `/new-plan <M#>` → prosa: *"construí `<ID>`"* → `/deploy-check`.
 3. Guía completa del método: `CLAUDE.md` y `docs/sdd/README.md`.

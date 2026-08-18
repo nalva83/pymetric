@@ -30,13 +30,18 @@ Cada etapa tiene su responsable. Nombralos al invocarlos.
 | Programador (`builder`) | prosa: "construí `<ID>`" | Una spec → código verificado (3 verificaciones) |
 | Diseñador de Producto (`ux-reviewer`) | prosa: "revisá que no parezca de IA" | Que la app no parezca prototipo |
 | DevOps (`deploy-engineer`) | `/deploy-check [entorno]` | El control "listo para publicar" |
+| *(puerta de entrada)* | `/empezar` | Dónde está el proyecto y cuál es el único paso siguiente |
 | *(red de seguridad)* | `/save-point <etiqueta>` | Punto de retorno en Git |
 
 ## Flujo y estado
 - **Método:** idea → `/new-prd` → `/new-architecture` → `/new-plan` → "construí `<ID>`" →
-  `/deploy-check`. Guía completa: `docs/sdd/README.md`.
+  `/deploy-check`. Guía completa: `docs/sdd/README.md`. Si el owner no sabe qué toca: `/empezar`.
 - **El estado de las piezas vive en UN solo lugar:** la tabla del plan activo en
   `docs/sdd/plans/active/`.
+- **"Probalo vos" al cerrar cada milestone:** cuando la última pieza de un plan queda en ✅,
+  levantá la app en background (`npm run dev` o equivalente) y entregale al owner el link listo
+  (ej. `http://localhost:3000`) + qué probar en 1-2 frases. El owner nunca levanta servers. El
+  milestone no se archiva sin su confirmación de que lo que ve está bien.
 - **Nota entre sesiones:** `PROGRESS.md` (dónde retomar). **Porqués:** `DECISIONS.md`.
 
 ### Al iniciar la sesión

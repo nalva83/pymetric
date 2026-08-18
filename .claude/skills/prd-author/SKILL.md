@@ -27,7 +27,10 @@ y en qué orden**. El PRD es dueño del *qué*; el *cómo* técnico es de `archi
    que de verdad bloquean (3-5 máximo) y hacelas juntas con la herramienta de preguntas. Lo que la
    idea ya responde, no se re-pregunta. Lo no bloqueante se anota en §8 (preguntas abiertas) y no
    frena el documento.
-5. **Riesgos con su límite aceptado.** Cada riesgo dice hasta dónde se tolera y qué se hace al
+5. **Toda pregunta técnica se sirve digerida.** El owner no es técnico: si la decisión es técnica,
+   la pregunta explica en llano qué significa, da los pros y contras de cada opción, y **sugiere
+   una** según el contexto del proyecto. Nunca una pregunta técnica cruda que no pueda responder.
+6. **Riesgos con su límite aceptado.** Cada riesgo dice hasta dónde se tolera y qué se hace al
    cruzar ese punto. Un riesgo sin límite es una preocupación, no una decisión.
 
 ## El flujo

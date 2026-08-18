@@ -23,7 +23,9 @@ descomposición: acá se hace todo en una pasada.
    se arregla allá.
 2. **Una ronda de preguntas, en un solo bloque.** Recorrer todo el milestone, juntar las preguntas
    que de verdad bloquean y hacerlas juntas con la herramienta de preguntas, ANTES de escribir.
-   Lo no bloqueante se anota como pregunta abierta en el plan y no frena nada.
+   Lo no bloqueante se anota como pregunta abierta en el plan y no frena nada. **Toda pregunta
+   técnica se sirve digerida:** qué significa en llano, pros y contras de cada opción, y una
+   opción sugerida según el contexto — nunca una pregunta cruda que el owner no pueda responder.
 3. **Specs chicas y comprobables.** Cada spec: un resultado que se puede ver funcionar, con IDs
    `M#-##` y sus dependencias anotadas (`Depende de`). Cada condición de terminado del milestone
    tiene que estar cubierta por al menos una spec — un ítem sin spec es un agujero del plan.
