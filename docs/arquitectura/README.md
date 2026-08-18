@@ -1,7 +1,7 @@
 # Arquitectura — el *cómo* del proyecto
 
 > **Dueño de:** las decisiones técnicas del proyecto. Viven en **un solo archivo**:
-> [`decisiones.md`](decisiones.md) (lo escribe `/new-architecture`), con una sección por tema —
+> [`decisiones.md`](decisiones.md) (lo escribe `/arquitectura`), con una sección por tema —
 > stack y deploy · datos (y aislamiento entre usuarios, si aplica) · claves y secretos ·
 > integración con la IA y techo de gasto · costo estimado.
 > **No cubre:** el alcance (→ [`../prd.md`](../prd.md)) · el proceso de trabajo

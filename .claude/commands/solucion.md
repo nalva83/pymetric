@@ -40,5 +40,5 @@ fallback genérico de la skill). Nada comercial salvo el precio base.
   `> Basado en: <ruta-icp> | Tipo: <tipo> | Supuestos abiertos: N | Fecha: YYYY-MM-DD`,
   y cerralo con una sección **"Supuestos abiertos"** (los riesgosos 🔴).
 - Decisiones clave (tipo, resultado prometido, precio base, formato) → `DECISIONS.md`.
-- Cerrá sugiriendo: **`/new-prd`** usando `docs/icp.md` + `docs/solucion.md` como
+- Cerrá sugiriendo: **`/prd`** usando `docs/icp.md` + `docs/solucion.md` como
   insumos, para bajar la solución a un PRD construible.

@@ -14,16 +14,19 @@ claro de "terminado"**, y cada etapa tiene un responsable del equipo de agentes.
 
 ## El flujo (4 etapas + red de seguridad)
 
-| Etapa | Comando / disparo | Quién | Qué produce |
+| Etapa | Comando | Quién | Qué produce |
 |---|---|---|---|
-| 1 · El qué | **`/new-prd`** | Analista de Producto | `docs/prd.md`: qué construimos, en qué orden, y qué queda afuera |
-| 2 · El cómo | **`/new-architecture`** | Arquitecto | `docs/arquitectura/decisiones.md` + reglas numeradas en la constitución |
-| 3 · El plan | **`/new-plan M#`** | Planificador | El plan del milestone (`plans/active/`) + la ficha de cada pieza (`specs/`) |
-| 4 · La construcción | prosa: *"construí `<ID>`"* | Programador (`builder`) | Código con las 3 verificaciones en verde, una pieza a la vez |
-| Final · Publicar | **`/deploy-check`** | DevOps + Diseñador | Veredicto "listo para publicar" (go/no-go) |
+| 0 · Para quién | **`/icp`** | Investigador de ICP | `docs/icp.md`: tu cliente ideal (opcional, antes del PRD) |
+| 0 · Qué le ofrecés | **`/solucion <tipo>`** | Arquitecto de Soluciones | `docs/solucion.md`: el QUÉ del producto (opcional) |
+| 1 · El qué | **`/prd`** | Analista de Producto | `docs/prd.md`: qué construimos, en qué orden, y qué queda afuera |
+| 2 · El cómo | **`/arquitectura`** | Arquitecto | `docs/arquitectura/decisiones.md` + reglas numeradas en la constitución |
+| 3 · El orden | **`/roadmap M#`** | Planificador | El plan del milestone con su tabla de piezas (`plans/active/`) |
+| 4 · Las instrucciones | **`/specs`** | Planificador | La ficha de cada pieza (`specs/`) |
+| 5 · La construcción | **`/implementar <ID>`** (o prosa: *"construí `<ID>`"*) | Programador (`builder`) | Código con las 3 verificaciones en verde, una pieza a la vez |
+| 6 · Publicar | **`/deploy`** | DevOps + Diseñador | Control listo-para-publicar y, con GO + confirmación, la app online |
 
-Transversal: **`/save-point <etiqueta>`** deja un punto de retorno en Git antes de un cambio
-grande — siempre se puede volver atrás.
+Transversales: **`/empezar`** te dice dónde estás y qué toca; **`/save-point <etiqueta>`** deja
+un punto de retorno en Git antes de un cambio grande — siempre se puede volver atrás.
 
 ## Dos conceptos, un solo estado
 

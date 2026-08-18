@@ -4,7 +4,7 @@ description: >-
   DevOps: corre el checklist "listo para publicar" antes del deploy — verificaciones en verde (#5),
   claves fuera del código (#2), techo de gasto activo (#3), aprobación humana en efectos externos
   (#4), variables de entorno, build de producción y URL. Incluye el chequeo de costo estimado.
-  Lo dispara /deploy-check. Devuelve go/no-go; no despliega ni expone secretos.
+  Lo dispara /deploy. Devuelve go/no-go; no despliega ni expone secretos.
 tools: Read, Grep, Glob, Bash
 ---
 

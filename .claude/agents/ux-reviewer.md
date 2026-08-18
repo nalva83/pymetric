@@ -3,7 +3,7 @@ name: ux-reviewer
 description: >-
   Diseñador de Producto: revisa la app terminada para que NO parezca un prototipo hecho por IA —
   consistencia visual, jerarquía, estados de carga/error/vacío, transiciones, textos y
-  accesibilidad básica. Lo dispara la prosa ("revisá que no parezca de IA") o /deploy-check —
+  accesibilidad básica. Lo dispara la prosa ("revisá que no parezca de IA") o /deploy —
   una sola pasada por versión del código. Solo reporta hallazgos y un veredicto; no toca código.
 tools: Read, Grep, Glob, Bash
 ---

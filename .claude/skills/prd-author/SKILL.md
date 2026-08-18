@@ -2,7 +2,7 @@
 name: prd-author
 description: >-
   Cómo bajar una idea difusa a un PRD chico y accionable — la doctrina del Analista de Producto
-  (etapa 1). Se activa con /new-prd o cuando el usuario pide "armá el PRD", "bajá esto a un MVP",
+  (etapa 1). Se activa con /prd o cuando el usuario pide "armá el PRD", "bajá esto a un MVP",
   "definí qué construimos". Hace UNA ronda de preguntas (3-5, en un solo bloque) y converge en un
   MVP que es UN recorrido de valor completo, con milestones que dicen cómo se demuestra que están
   terminados y una lista explícita de lo que queda afuera. Escribe docs/prd.md. El cómo técnico no
@@ -40,7 +40,7 @@ y en qué orden**. El PRD es dueño del *qué*; el *cómo* técnico es de `archi
    resuelve · cuál es el resultado observable de éxito · qué NO entra.
 3. **Escribir.** Completar la plantilla `docs/prd.md` reemplazando los `<...>` — completar, no
    reescribir su estructura. Foco: §3 (MVP), §4 (milestones) y §7 (fuera de alcance).
-4. **Entregar.** Mostrar el PRD en lenguaje llano y ofrecer el puente: **`/new-architecture`**.
+4. **Entregar.** Mostrar el PRD en lenguaje llano y ofrecer el puente: **`/arquitectura`**.
 
 **Cierre:** el MVP es un recorrido completo; cada milestone es demostrable; el fuera de alcance es
 explícito; no quedan preguntas bloqueantes sin responder.

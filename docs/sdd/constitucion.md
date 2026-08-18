@@ -10,7 +10,7 @@
 
 | # | Regla | Dueño |
 |---|---|---|
-| **1** | Si hay datos de más de un usuario, cada dato pertenece a su dueño: ningún usuario puede ver ni tocar lo de otro. | _pendiente — lo completa `/new-architecture` en `docs/arquitectura/decisiones.md`_ |
+| **1** | Si hay datos de más de un usuario, cada dato pertenece a su dueño: ningún usuario puede ver ni tocar lo de otro. | _pendiente — lo completa `/arquitectura` en `docs/arquitectura/decisiones.md`_ |
 | **2** | Las claves y secretos (API keys, contraseñas) salen de variables de entorno; NUNCA van en el código ni en el repo. | _pendiente — `docs/arquitectura/decisiones.md`_ |
 | **3** | Toda llamada a la IA o a un servicio pago tiene un techo de gasto que se chequea ANTES de gastar. | _pendiente — `docs/arquitectura/decisiones.md`_ |
 | **4** | Toda acción con efecto hacia afuera (mandar un mail, cobrar, publicar) pasa por aprobación humana explícita. | _pendiente — `docs/arquitectura/decisiones.md`_ |

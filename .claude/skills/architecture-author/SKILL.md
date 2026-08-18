@@ -2,7 +2,7 @@
 name: architecture-author
 description: >-
   Cómo fijar las decisiones técnicas del proyecto — la doctrina del Arquitecto (etapa 2). Se activa
-  con /new-architecture o cuando el usuario pide "definí la arquitectura", "dónde se guardan los
+  con /arquitectura o cuando el usuario pide "definí la arquitectura", "dónde se guardan los
   datos", "modelo de datos". Escribe UN archivo (docs/arquitectura/decisiones.md) con una sección
   por tema — stack, datos y aislamiento por usuario, secretos, integración con la IA y techo de
   gasto, deploy — y numera las reglas innegociables en docs/sdd/constitucion.md. Sin subagentes: el
@@ -42,7 +42,7 @@ para que no se re-discutan en cada spec. Todo va a **un solo archivo**:
 2. **Escribir `docs/arquitectura/decisiones.md`**: una sección por tema (punto 1), con sus reglas
    MUST marcadas.
 3. **Reconciliar la constitución**: completar los dueños de #1–#4 y agregar reglas nuevas si las hay.
-4. **Registrar** las decisiones durables en `DECISIONS.md` y ofrecer el puente: **`/new-plan`**.
+4. **Registrar** las decisiones durables en `DECISIONS.md` y ofrecer el puente: **`/roadmap`**.
 
 **Cierre:** cada regla innegociable tiene número y dueño; el archivo cubre los temas mínimos; las
 decisiones durables están en DECISIONS.md.

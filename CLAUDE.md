@@ -26,18 +26,19 @@ Cada etapa tiene su responsable. Nombralos al invocarlos.
 |---|---|---|
 | Investigador de ICP (`icp-researcher`) | `/icp [idea]` | Para quién construimos → `docs/icp.md` (opcional, antes del PRD) |
 | Arquitecto de Soluciones (`solution-architect`) | `/solucion <tipo>` | El QUÉ del producto → `docs/solucion.md` (opcional, antes del PRD) |
-| Analista de Producto | `/new-prd <idea>` | La idea → el PRD (el qué) |
-| Arquitecto | `/new-architecture` | El PRD → las decisiones técnicas (el cómo) |
-| Planificador | `/new-plan <M#>` | El milestone → plan + specs |
-| Programador (`builder`) | prosa: "construí `<ID>`" | Una spec → código verificado (3 verificaciones) |
+| Analista de Producto | `/prd <idea>` | La idea → el PRD (el qué de la app) |
+| Arquitecto | `/arquitectura` | El PRD → las decisiones técnicas (el cómo) |
+| Planificador | `/roadmap <M#>` → `/specs` | El milestone → el plan (orden) → las fichas (instrucciones) |
+| Programador (`builder`) | `/implementar <ID>` (o prosa: "construí `<ID>`") | Una spec → código verificado (3 verificaciones) |
 | Diseñador de Producto (`ux-reviewer`) | prosa: "revisá que no parezca de IA" | Que la app no parezca prototipo |
-| DevOps (`deploy-engineer`) | `/deploy-check [entorno]` | El control "listo para publicar" |
+| DevOps (`deploy-engineer`) | `/deploy [entorno]` | Control listo-para-publicar + deploy real con tu OK |
 | *(puerta de entrada)* | `/empezar` | Dónde está el proyecto y cuál es el único paso siguiente |
 | *(red de seguridad)* | `/save-point <etiqueta>` | Punto de retorno en Git |
 
 ## Flujo y estado
-- **Método:** idea → `/new-prd` → `/new-architecture` → `/new-plan` → "construí `<ID>`" →
-  `/deploy-check`. Guía completa: `docs/sdd/README.md`. Si el owner no sabe qué toca: `/empezar`.
+- **Método (los 8 comandos):** `/icp` → `/solucion` → `/prd` → `/arquitectura` → `/roadmap` →
+  `/specs` → `/implementar` → `/deploy`. Guía completa: `docs/sdd/README.md`. Si el owner no
+  sabe qué toca: `/empezar`.
 - **El estado de las piezas vive en UN solo lugar:** la tabla del plan activo en
   `docs/sdd/plans/active/`.
 - **"Probalo vos" al cerrar cada milestone:** cuando la última pieza de un plan queda en ✅,

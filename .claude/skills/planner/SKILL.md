@@ -2,18 +2,19 @@
 name: planner
 description: >-
   Cómo convertir un milestone del PRD en un plan con specs listas para construir — la doctrina del
-  Planificador (etapa 3, fusión de roadmap + specs). Se activa con /new-plan, o cuando el usuario
-  pide "armá el plan", "partime esto en specs", "descomponé el milestone". Hace UNA ronda de
-  preguntas bloqueantes en un solo bloque, escribe el plan (docs/sdd/plans/active/) con su tabla de
-  specs — la ÚNICA fuente del estado — y el detalle de cada spec (docs/sdd/specs/). Con 3 specs o
-  menos las escribe directo; con más, delega en paralelo. No implementa código.
+  Planificador (etapa de plan). Se activa con /roadmap (el plan y su tabla) y /specs (la ficha de
+  cada pieza), o cuando el usuario pide "armá el plan", "partime esto en specs", "descomponé el
+  milestone". Hace UNA ronda de preguntas bloqueantes en un solo bloque, escribe el plan
+  (docs/sdd/plans/active/) con su tabla de specs — la ÚNICA fuente del estado — y el detalle de
+  cada spec (docs/sdd/specs/). Con 3 specs o menos las escribe directo; con más, delega en
+  paralelo. No implementa código.
 ---
 
 # planner — cómo se arma el plan y sus specs
 
-Doctrina de la **etapa 3**: de un milestone del PRD a un **plan** (el índice) y sus **specs**
-(la ficha de cada pieza de trabajo). Reemplaza a las viejas etapas separadas de roadmap y
-descomposición: acá se hace todo en una pasada.
+Doctrina de la etapa de planificación: de un milestone del PRD a un **plan** (el índice, lo
+ejecuta `/roadmap`) y sus **specs** (la ficha de cada pieza, las ejecuta `/specs`). Una sola
+doctrina, dos comandos que la orquestan por fases.
 
 ## Doctrina
 
@@ -52,7 +53,7 @@ descomposición: acá se hace todo en una pasada.
    fuera de alcance, riesgos, reglas tocadas y la tabla de specs.
 4. **Escribir las specs** (`docs/sdd/specs/<ID>-<tema>.md` con la plantilla), directo o delegado
    según el punto 7.
-5. **Entregar** el plan con su tabla y ofrecer el puente: *"construí `<ID>`"* (el Programador).
+5. **Entregar** el plan con su tabla y ofrecer el puente: **`/implementar <ID>`** (el Programador).
 
 **Cierre:** cada condición del milestone tiene su spec; cada spec tiene criterios comprobables y
 dependencias; la tabla del plan refleja todo; no quedan preguntas bloqueantes.

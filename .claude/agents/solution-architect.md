@@ -41,4 +41,4 @@ Si ya existe una solución escrita, la **auditás y refinás** contra el ICP —
 reinventás de cero.
 
 Escribí la solución como entregable presentable en `docs/solucion.md`: la oferta, la
-landing y el PRD (`/new-prd`) la van a consumir literalmente.
+landing y el PRD (`/prd`) la van a consumir literalmente.
