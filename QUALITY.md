@@ -3,7 +3,7 @@ PLANTILLA — QUALITY.md (quality document, artefacto activo)
 NO es una evaluación de una sola vez: es un tracker de si el codebase
 se fortalece o debilita con el tiempo. Actualizar en la limpieza periódica (semanal).
 Las sesiones nuevas leen esto y arreglan PRIMERO el módulo de menor score.
-Escala: A (sólido) → D (problemático). Ver: docs/09-handoff-y-limpieza.md
+Escala: A (sólido) → D (problemático).
 -->
 
 # Quality Document

@@ -46,8 +46,7 @@ Gobierna cómo se guardan y se aíslan los datos de cada usuario.
 
 | # | Regla | Dueño |
 |---|---|---|
-| **1** | Todo dato de negocio MUST estar acotado a su usuario dueño (scope/RLS); ningún acceso cruza usuarios. | [`docs/arquitectura/modelo-de-datos.md`](../arquitectura/modelo-de-datos.md) §2 |
-| **6** | El servidor MUST tratar cada request como stateless: no persiste las respuestas del formulario ni el diagnóstico en ninguna store durable (disco, DB, cola, log de contenido). Refuerzo operativo de #1. | [`docs/arquitectura/modelo-de-datos.md`](../arquitectura/modelo-de-datos.md) §2 |
+| **1** | Todo dato de negocio MUST estar acotado a su usuario dueño (scope/RLS); ningún acceso cruza usuarios. | _pendiente — `docs/arquitectura/modelo-de-datos.md`_ |
 
 ## B · Secretos y costo
 
@@ -55,8 +54,8 @@ Gobierna credenciales y gasto.
 
 | # | Regla | Dueño |
 |---|---|---|
-| **2** | API keys y secretos MUST venir de variables de entorno / secret manager; NUNCA en el código ni en el repo. | [`docs/arquitectura/integracion-llm.md`](../arquitectura/integracion-llm.md) §2 |
-| **3** | Todo consumo de LLM o servicio pago MUST tener un techo de gasto (gate de presupuesto) antes de ejecutar. | [`docs/arquitectura/integracion-llm.md`](../arquitectura/integracion-llm.md) §2 |
+| **2** | API keys y secretos MUST venir de variables de entorno / secret manager; NUNCA en el código ni en el repo. | _pendiente — `docs/arquitectura/integracion-llm.md`_ |
+| **3** | Todo consumo de LLM o servicio pago MUST tener un techo de gasto (gate de presupuesto) antes de ejecutar. | _pendiente — `docs/arquitectura/integracion-llm.md`_ |
 
 ## C · Control humano (HITL)
 
@@ -64,7 +63,7 @@ Gobierna las acciones con efecto hacia afuera.
 
 | # | Regla | Dueño |
 |---|---|---|
-| **4** | Toda acción con efecto hacia afuera (mail, pago, publicación) MUST pasar por aprobación humana explícita. | [`docs/arquitectura/stack-y-deploy.md`](../arquitectura/stack-y-deploy.md) §2 (N/A por diseño en el MVP: sin efectos externos) |
+| **4** | Toda acción con efecto hacia afuera (mail, pago, publicación) MUST pasar por aprobación humana explícita. | _pendiente — `docs/arquitectura/<archivo>.md`_ |
 
 ## D · Verificación
 

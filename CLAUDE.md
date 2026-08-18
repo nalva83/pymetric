@@ -3,7 +3,6 @@ PLANTILLA — CLAUDE.md (archivo de entrada / "landing page" del agente).
 Este repo es un TEMPLATE del arnés SDD: completá los placeholders <...> con tu proyecto.
 Objetivo: 50-200 líneas. Es un ROUTER, no una enciclopedia.
 Si algo crece, movelo a docs/*.md y dejá solo el link.
-Ver: docs/harness-engineering-best-practices/02-instrucciones-en-capas.md
 -->
 
 # <Nombre del proyecto>
@@ -82,6 +81,5 @@ El método lo protagoniza un equipo de agentes; cada etapa tiene el suyo. Nombra
 ## Documentos temáticos (leer bajo demanda)
 - **Alcance + milestones + Definition of Done:** `docs/prd.md`.
 - **Pipeline SDD** (proceso, plantillas, qué NO va en una spec): `docs/sdd/README.md` + `docs/sdd/specs/TEMPLATE.md` + `docs/sdd/plans/TEMPLATE.md`.
-- **Metodología del arnés** (por qué de estas reglas): `docs/harness-engineering-best-practices/`.
 - **Diseño/arquitectura del proyecto** (creás por proyecto): `docs/arquitectura/`.
 - Skills y commands del arnés: `.claude/`.
