@@ -1,89 +1,59 @@
-# SDD — de un milestone a código
+# El método — de la idea a la app publicada
 
-> **Dueño de:** el proceso de autoría y cierre de unidades de trabajo. Qué es un roadmap, qué es una spec, quién es canónico para el estado, y el lifecycle.
-> **No cubre:** el alcance ni el orden de construcción → [`../prd.md`](../prd.md) · el diseño de cualquier cosa → el documento de diseño dueño del concepto · las reglas innegociables → [`constitucion.md`](constitucion.md).
-> **Última revisión:** `<fecha>`
+> **Dueño de:** el proceso de trabajo: qué etapa sigue a cuál, qué produce cada una y qué
+> significa "terminado". Las reglas innegociables viven en [`constitucion.md`](constitucion.md);
+> el alcance, en [`../prd.md`](../prd.md); el diseño técnico, en
+> [`../arquitectura/decisiones.md`](../arquitectura/decisiones.md).
 
 ---
 
-## El problema que resuelve
+## La idea en una frase
 
-El PRD dice *qué* construir y *cuándo está terminado*. El diseño dice *cómo funciona*. Entre "el DoD de un milestone dice que tal suite pasa en verde" y alguien escribiendo código hay un salto, y ese salto es donde se pierde el rigor: se olvida un gate, se cierra sin la capa 2, se decide algo durable en un mensaje de commit.
+En vez de pedirle todo junto a la IA, el trabajo se parte en **piezas chicas con un contrato
+claro de "terminado"**, y cada etapa tiene un responsable del equipo de agentes.
 
-Esta carpeta es ese puente. Una unidad de trabajo = una spec con contrato, criterios de aceptación que son tests, gates declarados y una definición de hecho que no se negocia.
+## El flujo (4 etapas + red de seguridad)
 
-## El flujo
+| Etapa | Comando / disparo | Quién | Qué produce |
+|---|---|---|---|
+| 1 · El qué | **`/new-prd`** | Analista de Producto | `docs/prd.md`: qué construimos, en qué orden, y qué queda afuera |
+| 2 · El cómo | **`/new-architecture`** | Arquitecto | `docs/arquitectura/decisiones.md` + reglas numeradas en la constitución |
+| 3 · El plan | **`/new-plan M#`** | Planificador | El plan del milestone (`plans/active/`) + la ficha de cada pieza (`specs/`) |
+| 4 · La construcción | prosa: *"construí `<ID>`"* | Programador (`builder`) | Código con las 3 verificaciones en verde, una pieza a la vez |
+| Final · Publicar | **`/deploy-check`** | DevOps + Diseñador | Veredicto "listo para publicar" (go/no-go) |
 
-El método es **Spec-Driven Development**, un recorrido de **idea → PRD → arquitectura → roadmap → specs → implementación → deploy**, con un equipo de agentes que protagoniza cada etapa. Los comandos encadenan las etapas de autoría; la implementación y las revisiones se dictan en lenguaje natural al agente que corresponde (ver `../../CLAUDE.md § El equipo de agentes`).
+Transversal: **`/save-point <etiqueta>`** deja un punto de retorno en Git antes de un cambio
+grande — siempre se puede volver atrás.
 
-| Etapa | Comando / disparo | Produce |
-|---|---|---|
-| 1 · PRD (el *qué*) | **`/new-prd`** (`prd-author`) | `../prd.md`: MVP + milestones con DoD + no-objetivos |
-| 2 · Arquitectura (el *cómo*) | **`/new-architecture`** (`architecture-author` → fan-out `data-modeler`) | `../arquitectura/*` + filas en `constitucion.md` |
-| 3 · Roadmap | **`/new-roadmap`** (`roadmap-author`) | `plans/active/<slug>.md`: tabla de SPECs (§8) |
-| 4 · Specs | **`/decompose`** (`spec-author`, fan-out) | `specs/<ID>-<slug>.md` (una por slice) |
-| 5 · Implementación | *prosa* → `spec-implementer` · `spec-verifier` · `ux-reviewer` | código con las 3 capas en verde |
-| 6 · Conexión IA / costo | *prosa* → `spec-implementer` · `cost-guardian` | integración con techo de gasto y secretos seguros |
-| 7 · Deploy | **`/deploy-check`** (`deploy-engineer`) | checklist "listo para producción" |
+## Dos conceptos, un solo estado
 
-Transversal: **`/save-point`** crea un punto de retorno con Git antes de un cambio grande (red de seguridad); `onboarding-guide` corre el ritual de inicio de sesión.
+- **El plan** (`plans/active/<slug>.md`) es el índice de un milestone: qué piezas hay, en qué
+  orden, y **el estado de cada una — este es el ÚNICO lugar donde vive el estado**.
+- **La spec** (`specs/<ID>-<tema>.md`) es la ficha de UNA pieza: qué logra, cómo se comprueba,
+  qué queda afuera. No lleva estado propio.
 
-## Tres conceptos que conviene no mezclar
+IDs: `M#-##` (milestone del PRD + orden). Al cerrar un milestone, su plan se mueve a
+`plans/archive/`. Las specs terminadas no se borran: quedan como registro.
 
-| Concepto | Qué es | Dónde vive |
-|---|---|---|
-| **Roadmap** | El **índice y el estado** de un milestone o feature: qué specs hay, en qué orden, qué falta. Transitorio. **Canónico para el estado** | `plans/active/` → `plans/archive/` al cerrar |
-| **Spec** | El **contrato** de UNA unidad atómica: objetivo, requisitos, gates, criterios, DoD. Durable | `specs/<ID>-<slug>.md` |
-| **Plan de implementación** | El *cómo* técnico de esa spec | **Adentro de la spec** (§2, §6, §8, §10). No es un archivo aparte |
+## Qué significa "terminado" (regla #5)
 
-> **Regla anti-drift.** El estado canónico es la fila del roadmap. El `status` del frontmatter de la spec es un **espejo**: al cerrar se actualizan los dos. La spec apunta a su roadmap con `plan_row`; el roadmap apunta al archivo de spec.
+Una pieza está terminada cuando pasan **las 3 verificaciones, en orden**:
+1. **Tests unitarios + linter** — cada parte funciona sola y el código está prolijo.
+2. **Integración** — las partes funcionan juntas (y si hay datos de usuarios, uno no ve lo de otro).
+3. **El recorrido completo** — lo que promete la pieza corre de punta a punta, como lo usaría una
+   persona.
 
-El **roadmap maestro** —alcance del MVP y orden de los milestones— es [`../prd.md`](../prd.md), no esta carpeta. Un roadmap de `plans/` descompone **un** milestone o **una** feature.
+"El código está escrito" **no** es terminado. Y el alcance se achica quitando piezas, **nunca**
+bajando la vara de terminado (regla de gestión, `docs/prd.md` §9).
 
-## Convención de archivos
+---
 
-```
-docs/sdd/
-├── README.md          ← este archivo
-├── constitucion.md    ← las reglas innegociables, numeradas y citables
-├── specs/
-│   ├── TEMPLATE.md    ← plantilla canónica (copiar, no editar)
-│   └── <ID>-<slug>.md
-└── plans/
-    ├── TEMPLATE.md
-    ├── active/
-    └── archive/
-```
+## Anexo técnico (para los agentes)
 
-- **`<ID>`** anclado al milestone del PRD: `M#-##`. El número mayor es el milestone, el menor el orden dentro del milestone. Para una spec suelta se admite `SPEC-##`, pero la preferida es `M#-##`.
-- **`<slug>`** kebab-case, corto y descriptivo.
-- Una spec = un archivo. Si necesita diseño extenso, va un hermano `<ID>-<slug>.design.md`.
-- Una feature grande se sub-numera (`M3-05-1`, `M3-05-2`, …) y **el orden se codifica con `depends_on`**, no con la posición en la tabla. El porqué de la feature entera vive en el roadmap que las agrupa.
-
-## Lifecycle
-
-1. **Crear** — copiar `specs/TEMPLATE.md` a `specs/<ID>-<slug>.md` y agregar su fila al roadmap activo (`status: draft`).
-2. **Clarify** — resolver los requisitos vagos **antes** de codear. Las preguntas van al §5 del roadmap; si la pregunta es de diseño, se resuelve en el documento dueño del concepto y acá queda el puntero. `status: ready`.
-3. **Implementar** — WIP=1, una spec a la vez. `status: in-progress`.
-4. **Verify** — las 3 capas en orden: **unit + linter → integración y aislamiento → contrato y e2e**. Si una falla, **fix-plan antes de re-correr**. Nunca se salta una capa "porque la siguiente la cubre".
-5. **Cerrar** — DoD completo → `status: done` en la spec **y** en el roadmap → decisión durable en [`DECISIONS.md`](../../DECISIONS.md) → al terminar la iteración, el roadmap se mueve a `plans/archive/`.
-
-**Las specs cerradas no se borran.** Quedan como registro de por qué algo es como es.
-
-## La constitución
-
-Las reglas innegociables están numeradas en [`constitucion.md`](constitucion.md) y toda spec declara cuáles toca y **cómo las verifica**. La regla vive en su documento de diseño dueño; la constitución solo le da un número estable para poder citarla por `#<n>`.
-
-Dos principios gobiernan este proceso:
-
-> **Primero el rojo.** Ningún test se da por bueno sin ver fallar antes el caso que debe atrapar: se escribe el test, se lo ve en rojo sin la implementación, y recién después se da por bueno.
-
-> **Hecho = las tres capas en verde**, en orden: unit + linter → integración y aislamiento → contrato y e2e. Ninguna unidad de trabajo se cierra sin esto.
-
-Y un principio de orden que no es un gate: **base primero** — nada se construye hasta que la demanda real lo llame. Los milestones no se acortan quitando Definition of Done: se acortan quitando alcance.
-
-## Qué NO va en una spec
-
-- **Diseño.** Si al escribir una spec estás decidiendo *cómo* funciona algo del modelo, pará: eso va al documento de diseño dueño del concepto. La spec lo linkea.
-- **Alcance.** Si estás decidiendo si algo entra o no en el MVP, va al [`../prd.md`](../prd.md).
-- **Re-explicaciones.** Rige la misma regla que en el resto del corpus: **un hecho, un dueño**. Si sentís que estás transcribiendo una regla, va un `#<número>` y un link.
+- **Test primero:** ningún test se da por bueno sin verlo fallar antes por la razón correcta.
+- **Una pieza a la vez:** no se arranca la siguiente spec con la actual sin terminar; sin
+  refactor colateral ("ya que estoy").
+- **Un hecho, un dueño:** las reglas se citan por `#<n>` (constitución), nunca se transcriben; el
+  diseño se linkea a `decisiones.md`, no se repite.
+- **Base primero:** nada se construye hasta que la demanda real lo llame.
+- Si una verificación falla: fix con causa raíz antes de re-correr; no se re-corre "a ver si pasa".

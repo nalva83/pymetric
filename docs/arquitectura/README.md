@@ -1,38 +1,15 @@
-<!-- PLANTILLA — índice de arquitectura del proyecto. Se llena por proyecto (lo escribe `/new-architecture` → architecture-author). Los `<...>` son placeholders. -->
-
 # Arquitectura — el *cómo* del proyecto
 
-> **Dueño de:** las decisiones técnicas de fondo y el diseño de cada concepto del sistema. Un archivo por tema.
-> **No cubre:** el alcance ni el orden → [`../prd.md`](../prd.md) · el proceso de autoría → [`../sdd/README.md`](../sdd/README.md) · la lista numerada de reglas → [`../sdd/constitucion.md`](../sdd/constitucion.md).
-> **Última revisión:** `2026-08-11`
+> **Dueño de:** las decisiones técnicas del proyecto. Viven en **un solo archivo**:
+> [`decisiones.md`](decisiones.md) (lo escribe `/new-architecture`), con una sección por tema —
+> stack y deploy · datos (y aislamiento entre usuarios, si aplica) · claves y secretos ·
+> integración con la IA y techo de gasto · costo estimado.
+> **No cubre:** el alcance (→ [`../prd.md`](../prd.md)) · el proceso de trabajo
+> (→ [`../sdd/README.md`](../sdd/README.md)).
 
----
-
-## Qué vive acá
-
-El *cómo* técnico del producto: stack, límites de servicio, contratos entre capas, y **un archivo por concepto de diseño** (autenticación, modelo de datos, integración con el LLM, deploy, …). Lo escribe `architecture-author` (comando `/new-architecture`), que además delega el modelo de datos a `data-modeler`.
-
-## Reglas de esta carpeta (un hecho, un dueño)
-
-- **Un archivo por concepto.** Si estás re-explicando algo que ya vive en otro archivo, va un link, no una copia.
-- **Los invariantes se marcan `⛔ MUST` / `MUST NOT`** en el archivo dueño, y se numeran en [`../sdd/constitucion.md`](../sdd/constitucion.md) con su `#<n>` para poder citarlos desde las specs.
-- **Toda decisión durable** cierra con una entrada en [`../../DECISIONS.md`](../../DECISIONS.md) (el *por qué*).
-- **Toda ambigüedad de diseño sin resolver** va a la sección `## Abierto` del archivo dueño, no a una spec.
-- El alcance (si algo entra o no en el MVP) no se decide acá: eso es del [`../prd.md`](../prd.md).
-
-## Convención de archivos
-
-```
-docs/arquitectura/
-├── README.md          ← este índice
-├── TEMPLATE.md        ← plantilla de un doc de diseño (copiar, no editar)
-└── <concepto>.md      ← uno por tema (ej: modelo-de-datos.md, integracion-llm.md, deploy.md)
-```
-
-## Mapa concepto → archivo dueño
-
-| Concepto | Archivo dueño | Reglas que numera |
-|---|---|---|
-| Stack, runtime y deploy (Next.js + Vercel, sin estado de servidor) | [`stack-y-deploy.md`](stack-y-deploy.md) | `#4` (N/A por diseño: sin efectos externos) |
-| Integración con el LLM (AI SDK + Gateway, salida estructurada, secretos, techo de gasto) | [`integracion-llm.md`](integracion-llm.md) | `#2`, `#3` |
-| Modelo de datos / no-persistencia + aislamiento por usuario | [`modelo-de-datos.md`](modelo-de-datos.md) | `#1`, `#6` |
+Reglas de esta carpeta:
+- **Un hecho, un dueño:** si algo ya está explicado en una sección, se linkea, no se copia.
+- Las reglas innegociables que salen de estas decisiones se numeran en
+  [`../sdd/constitucion.md`](../sdd/constitucion.md) y se citan por `#<n>`.
+- El porqué de cada decisión durable va a [`DECISIONS.md`](../../DECISIONS.md); lo que queda sin
+  resolver, a la sección `## Abierto` de `decisiones.md`.
