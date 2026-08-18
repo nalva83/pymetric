@@ -30,7 +30,7 @@ Cada etapa tiene su responsable. Nombralos al invocarlos.
 | Arquitecto | `/arquitectura` | El PRD → las decisiones técnicas (el cómo) |
 | Planificador | `/roadmap <M#>` → `/specs` | El milestone → el plan (orden) → las fichas (instrucciones) |
 | Programador (`builder`) | `/implementar <ID>` (o prosa: "construí `<ID>`") | Una spec → código verificado (3 verificaciones) |
-| Diseñador de Producto (`ux-reviewer`) | prosa: "revisá que no parezca de IA" | Que la app no parezca prototipo |
+| Diseñador de Producto (`ux-reviewer`) | lo despacha `/arquitectura` (autor) · prosa: "revisá que no parezca de IA" (auditor) | Define user-flow y marca; después audita que la app no parezca prototipo |
 | DevOps (`deploy-engineer`) | `/deploy [entorno]` | Control listo-para-publicar + deploy real con tu OK |
 | *(puerta de entrada)* | `/empezar` | Dónde está el proyecto y cuál es el único paso siguiente |
 | *(red de seguridad)* | `/save-point <etiqueta>` | Punto de retorno en Git |

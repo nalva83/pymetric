@@ -6,7 +6,8 @@ description: >-
   datos", "modelo de datos". Escribe UN documento por tema en docs/arquitectura/ (stack, modelo de
   datos, secretos, user flow, marca — y si aplican: integraciones IA, otras integraciones, auth y
   permisos), numera las reglas innegociables en docs/sdd/constitucion.md y al terminar actualiza
-  docs/prd.md con los links. Sin subagentes. No decide alcance (eso es docs/prd.md) ni implementa.
+  docs/prd.md con los links. Despacha en paralelo al Diseñador (ux-reviewer, modo autor) para los
+  borradores de user-flow.md y marca.md. No decide alcance (eso es docs/prd.md) ni implementa.
 ---
 
 # architecture-author — cómo se fijan las decisiones técnicas
@@ -27,6 +28,9 @@ todos escritos en la misma pasada (sin subagentes).
    - `user-flow.md` — el recorrido del usuario por la app, de la entrada al resultado.
    - `marca.md` — identidad visual y tono: colores, tipografía, voz de los textos. Lo que hace
      que la app no parezca un prototipo genérico.
+
+   `user-flow.md` y `marca.md` son de diseño de producto, no de arquitectura: **sus borradores
+   los propone el Diseñador (`ux-reviewer`, modo autor)** — ver el despacho en el flujo, punto 2.
 
    Y los **condicionales** — solo si el proyecto los necesita (si no, NO se crea el archivo y el
    índice lo marca):
@@ -51,9 +55,13 @@ todos escritos en la misma pasada (sin subagentes).
 ## El flujo
 
 1. **Leer el PRD** (`docs/prd.md`): MVP, milestones, fuera de alcance. Las decisiones sirven a
-   ese *qué*, no lo amplían. (Si existen `docs/icp.md` / `docs/solucion.md`, `marca.md` y
-   `user-flow.md` se derivan de ahí.)
-2. **Escribir los documentos** de `docs/arquitectura/` (punto 1) y actualizar su `README.md`
+   ese *qué*, no lo amplían.
+2. **Despachar al Diseñador y escribir en paralelo.** Primero despachá al **`ux-reviewer` en
+   modo autor** (Agent tool — corre en background) para que proponga los borradores de
+   `user-flow.md` y `marca.md` a partir del ICP, la solución y el PRD. Mientras trabaja,
+   escribí vos los documentos técnicos (stack, modelo de datos, secretos, integraciones, auth).
+   Cuando vuelva, consolidá sus borradores: escribí los dos archivos, resolvé lo que cruce a lo
+   técnico (eso es tuyo) y validá con el owner. Actualizá el `README.md` de la carpeta
    (índice tema→archivo).
 3. **Reconciliar la constitución**: completar los dueños de #1–#4 y numerar reglas nuevas.
 4. **Actualizar el PRD**: completar la sección "El cómo técnico" de `docs/prd.md` con el link a
