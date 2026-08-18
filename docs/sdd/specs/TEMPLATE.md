@@ -24,10 +24,17 @@ rechaza).>
 |---|---|---|
 | 1 | … | … |
 
-## 4. Qué queda afuera
+## 4. Qué ve el usuario (solo si la pieza tiene interfaz)
+<Si la pieza no tiene pantalla, borrá esta sección. Si la tiene, declará:
+- **Pantallas o vistas** que agrega o cambia.
+- **El recorrido**: qué hace el usuario, paso a paso, hasta llegar al resultado.
+- **Los tres estados**: qué ve mientras espera (carga), si algo falla (error) y si no hay
+  nada que mostrar (vacío). Estos estados son criterios de la tabla de §3, no opcionales.>
+
+## 5. Qué queda afuera
 <Lo que alguien podría esperar y esta pieza NO incluye. Una cosa a la vez.>
 
-## 5. Reglas del proyecto que toca
+## 6. Reglas del proyecto que toca
 <Las reglas innegociables de [la constitución](../constitucion.md) que esta pieza toca, citadas
 por número, con una línea de cómo se cumplen acá. Si no toca ninguna aparte de la #5 (que aplica
 siempre), dejá solo esa línea.>

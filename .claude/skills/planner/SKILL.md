@@ -30,6 +30,9 @@ doctrina, dos comandos que la orquestan por fases.
 3. **Specs chicas y comprobables.** Cada spec: un resultado que se puede ver funcionar, con IDs
    `M#-##` y sus dependencias anotadas (`Depende de`). Cada condición de terminado del milestone
    tiene que estar cubierta por al menos una spec — un ítem sin spec es un agujero del plan.
+   **Si la pieza tiene interfaz, la spec declara qué ve el usuario** (pantallas, recorrido y los
+   estados de carga/error/vacío, como pide la plantilla) — se define acá, no se descubre al
+   construir.
 4. **La tabla del plan es la ÚNICA fuente del estado.** Las specs no llevan estado propio; qué
    está pendiente, en curso o terminada se lee y se actualiza SOLO en la tabla del plan.
 5. **Las reglas innegociables se citan por número.** El plan lista qué reglas de
