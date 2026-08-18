@@ -3,7 +3,7 @@
 # <Nombre del producto> — PRD
 
 > **Este documento manda sobre el *qué*: qué construimos, en qué orden, y qué significa
-> «terminado».** El *cómo* técnico vive en `docs/arquitectura/decisiones.md` y no se decide acá.
+> «terminado».** El *cómo* técnico vive en `docs/arquitectura/` (un documento por tema) y no se decide acá.
 >
 > **Última revisión:** `<AAAA-MM-DD>`
 
@@ -69,7 +69,19 @@ Cada una con el milestone antes del cual se cierra.
 
 1. **`<pregunta>`** — *cerrar antes de `<M#>`.*
 
-## 7. La regla de gestión
+## 7. El cómo técnico (lo completa `/arquitectura`)
+
+› guía: esta sección la llena el Arquitecto al terminar — es el mapa de entrada a los documentos
+de `docs/arquitectura/`. No la completes a mano al escribir el PRD; dejala con los placeholders.
+
+- **Stack, deploy y costo:** `<link a docs/arquitectura/stack.md>`
+- **Modelo de datos:** `<link>`
+- **Secretos:** `<link>`
+- **Recorrido del usuario:** `<link>`
+- **Marca:** `<link>`
+- **Integraciones IA / otros sistemas / auth y permisos:** `<links, o "no aplica — <por qué>">`
+
+## 8. La regla de gestión
 
 > **El alcance se achica quitando features (que quedan visibles en §5), nunca bajando la vara de
 > «terminado».** Un milestone con condiciones recortadas parece cerrado y no lo está: la deuda

@@ -12,7 +12,7 @@ tools: Read, Grep, Glob, Write, Edit, Bash
 
 Sos el **Programador**: construís **una sola spec**, de punta a punta, y la dejás verificada.
 
-**Antes de codear, leé:** la spec (`docs/sdd/specs/<ID>-*.md`), `docs/arquitectura/decisiones.md`
+**Antes de codear, leé:** la spec (`docs/sdd/specs/<ID>-*.md`), los docs de `docs/arquitectura/` que la spec toca
 (el diseño ya decidido — no lo re-decidís) y las reglas `#<n>` que la spec cita
 (`docs/sdd/constitucion.md`).
 

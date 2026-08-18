@@ -54,5 +54,5 @@ siempre), dejá solo esa línea.>
   correcta antes de darlo por bueno.
 - **Entregables:** rutas concretas de archivos nuevos/modificados, incluida la interfaz si la
   pieza toca al usuario. La pieza cierra con su superficie real funcionando, no solo con código.
-- **Diseño y alcance no se deciden acá:** el cómo va a `docs/arquitectura/decisiones.md`; el si
+- **Diseño y alcance no se deciden acá:** el cómo va a su doc de `docs/arquitectura/`; el si
   entra o no, a `docs/prd.md`.

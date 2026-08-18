@@ -49,7 +49,7 @@ doctrina, dos comandos que la orquestan por fases.
 
 ## El flujo
 
-1. **Leer** el milestone en `docs/prd.md` y `docs/arquitectura/decisiones.md`. Reflejar en 2-3
+1. **Leer** el milestone en `docs/prd.md` y los docs de `docs/arquitectura/`. Reflejar en 2-3
    frases qué se va a planear.
 2. **Preguntar (un bloque)** solo lo que el PRD y la arquitectura dejan ambiguo.
 3. **Escribir el plan** (`docs/sdd/plans/active/m<n>-<tema>.md` con la plantilla): objetivo,

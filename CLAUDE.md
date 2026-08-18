@@ -58,5 +58,5 @@ Cada etapa tiene su responsable. Nombralos al invocarlos.
 3. Trabajo commiteado (qué + por qué); decisión durable → `DECISIONS.md`.
 
 ## Documentos (leer bajo demanda)
-- **Alcance y milestones:** `docs/prd.md` · **Decisiones técnicas:** `docs/arquitectura/decisiones.md`
+- **Alcance y milestones:** `docs/prd.md` · **Decisiones técnicas:** `docs/arquitectura/` (un doc por tema; índice en su README)
 - **El método y las plantillas:** `docs/sdd/README.md` · **Reglas numeradas:** `docs/sdd/constitucion.md`

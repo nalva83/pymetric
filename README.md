@@ -7,7 +7,7 @@ Repositorio limpio con el **arnés de Spec-Driven Development**: el equipo de ag
 - **`.claude/`** — agentes, skills y comandos del método.
 - **`CLAUDE.md`** — plantilla del archivo de entrada del agente (completá los placeholders `<...>`).
 - **`docs/prd.md`** — plantilla del PRD (la completa `/prd`).
-- **`docs/arquitectura/`** — las decisiones técnicas (`decisiones.md`, lo crea `/arquitectura`).
+- **`docs/arquitectura/`** — las decisiones técnicas, un doc por tema (los crea `/arquitectura`).
 - **`docs/sdd/`** — el método: constitución + plantillas de planes (`plans/`) y specs (`specs/`).
 - **`PROGRESS.md` / `DECISIONS.md`** — plantillas de estado entre sesiones.
 

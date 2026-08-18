@@ -22,10 +22,10 @@ y en qué orden**. El PRD es dueño del *qué*; el *cómo* técnico es de `archi
 2. **Cada milestone dice cómo se demuestra que está terminado.** Condiciones que pasan o no pasan
    — alguien lo puede ver funcionar, no alguien que dice que está hecho.
 3. **Lo que queda afuera se escribe.** "Una cosa a la vez" y "base primero": el alcance se achica
-   quitando features, nunca bajando la vara de terminado (regla de gestión del PRD §9).
+   quitando features, nunca bajando la vara de terminado (regla de gestión del PRD §8).
 4. **Una sola ronda de preguntas, en un solo bloque.** Antes de escribir, juntá TODAS las preguntas
    que de verdad bloquean (3-5 máximo) y hacelas juntas con la herramienta de preguntas. Lo que la
-   idea ya responde, no se re-pregunta. Lo no bloqueante se anota en §8 (preguntas abiertas) y no
+   idea ya responde, no se re-pregunta. Lo no bloqueante se anota en §6 (preguntas abiertas) y no
    frena el documento.
 5. **Toda pregunta técnica se sirve digerida.** El owner no es técnico: si la decisión es técnica,
    la pregunta explica en llano qué significa, da los pros y contras de cada opción, y **sugiere
@@ -39,7 +39,7 @@ y en qué orden**. El PRD es dueño del *qué*; el *cómo* técnico es de `archi
 2. **Preguntar (un bloque).** Cubrir solo lo que falte: qué hace y para quién · qué problema
    resuelve · cuál es el resultado observable de éxito · qué NO entra.
 3. **Escribir.** Completar la plantilla `docs/prd.md` reemplazando los `<...>` — completar, no
-   reescribir su estructura. Foco: §3 (MVP), §4 (milestones) y §7 (fuera de alcance).
+   reescribir su estructura. Foco: §2 (MVP), §3 (milestones) y §5 (fuera de alcance).
 4. **Entregar.** Mostrar el PRD en lenguaje llano y ofrecer el puente: **`/arquitectura`**.
 
 **Cierre:** el MVP es un recorrido completo; cada milestone es demostrable; el fuera de alcance es

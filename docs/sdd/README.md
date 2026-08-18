@@ -3,7 +3,7 @@
 > **Dueño de:** el proceso de trabajo: qué etapa sigue a cuál, qué produce cada una y qué
 > significa "terminado". Las reglas innegociables viven en [`constitucion.md`](constitucion.md);
 > el alcance, en [`../prd.md`](../prd.md); el diseño técnico, en
-> [`../arquitectura/decisiones.md`](../arquitectura/decisiones.md).
+> [`../arquitectura/`](../arquitectura/README.md).
 
 ---
 
@@ -19,7 +19,7 @@ claro de "terminado"**, y cada etapa tiene un responsable del equipo de agentes.
 | 0 · Para quién | **`/icp`** | Investigador de ICP | `docs/icp.md`: tu cliente ideal (opcional, antes del PRD) |
 | 0 · Qué le ofrecés | **`/solucion <tipo>`** | Arquitecto de Soluciones | `docs/solucion.md`: el QUÉ del producto (opcional) |
 | 1 · El qué | **`/prd`** | Analista de Producto | `docs/prd.md`: qué construimos, en qué orden, y qué queda afuera |
-| 2 · El cómo | **`/arquitectura`** | Arquitecto | `docs/arquitectura/decisiones.md` + reglas numeradas en la constitución |
+| 2 · El cómo | **`/arquitectura`** | Arquitecto | `docs/arquitectura/` (un doc por tema) + reglas numeradas en la constitución |
 | 3 · El orden | **`/roadmap M#`** | Planificador | El plan del milestone con su tabla de piezas (`plans/active/`) |
 | 4 · Las instrucciones | **`/specs`** | Planificador | La ficha de cada pieza (`specs/`) |
 | 5 · La construcción | **`/implementar <ID>`** (o prosa: *"construí `<ID>`"*) | Programador (`builder`) | Código con las 3 verificaciones en verde, una pieza a la vez |
@@ -47,7 +47,7 @@ Una pieza está terminada cuando pasan **las 3 verificaciones, en orden**:
    persona.
 
 "El código está escrito" **no** es terminado. Y el alcance se achica quitando piezas, **nunca**
-bajando la vara de terminado (regla de gestión, `docs/prd.md` §9).
+bajando la vara de terminado (regla de gestión, `docs/prd.md` §8).
 
 Y un milestone entero cierra con un paso humano: **"probalo vos"** — el agente deja la app
 levantada, entrega el link listo, y el owner confirma con sus ojos que lo que ve está bien.
@@ -61,6 +61,6 @@ Recién ahí el plan se archiva.
 - **Una pieza a la vez:** no se arranca la siguiente spec con la actual sin terminar; sin
   refactor colateral ("ya que estoy").
 - **Un hecho, un dueño:** las reglas se citan por `#<n>` (constitución), nunca se transcriben; el
-  diseño se linkea a `decisiones.md`, no se repite.
+  diseño se linkea a su doc de `docs/arquitectura/`, no se repite.
 - **Base primero:** nada se construye hasta que la demanda real lo llame.
 - Si una verificación falla: fix con causa raíz antes de re-correr; no se re-corre "a ver si pasa".
