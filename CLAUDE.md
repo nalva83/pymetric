@@ -24,6 +24,8 @@ Cada etapa tiene su responsable. Nombralos al invocarlos.
 
 | Rol | Cómo se invoca | Qué hace |
 |---|---|---|
+| Investigador de ICP (`icp-researcher`) | `/icp [idea]` | Para quién construimos → `docs/icp.md` (opcional, antes del PRD) |
+| Arquitecto de Soluciones (`solution-architect`) | `/solucion <tipo>` | El QUÉ del producto → `docs/solucion.md` (opcional, antes del PRD) |
 | Analista de Producto | `/new-prd <idea>` | La idea → el PRD (el qué) |
 | Arquitecto | `/new-architecture` | El PRD → las decisiones técnicas (el cómo) |
 | Planificador | `/new-plan <M#>` | El milestone → plan + specs |
