@@ -5,7 +5,7 @@ description: >-
   Planificador (etapa de plan). Se activa con /roadmap (el plan y su tabla) y /specs (la ficha de
   cada pieza), o cuando el usuario pide "armá el plan", "partime esto en specs", "descomponé el
   milestone". Hace UNA ronda de preguntas bloqueantes en un solo bloque, escribe el plan
-  (docs/sdd/plans/active/) con su tabla de specs — la ÚNICA fuente del estado — y el detalle de
+  (docs/sdd/roadmaps/active/) con su tabla de specs — la ÚNICA fuente del estado — y el detalle de
   cada spec (docs/sdd/specs/). Con 3 specs o menos las escribe directo; con más, delega en
   paralelo. No implementa código.
 ---
@@ -38,7 +38,7 @@ doctrina, dos comandos que la orquestan por fases.
 5. **Las reglas innegociables se citan por número.** El plan lista qué reglas de
    `docs/sdd/constitucion.md` toca el milestone (`#<n>` + una línea de por qué); cada spec detalla
    cómo cumple las suyas. Nunca se copia el enunciado.
-6. **Plantillas al mínimo.** Plan: `docs/sdd/plans/TEMPLATE.md`. Spec: `docs/sdd/specs/TEMPLATE.md`.
+6. **Plantillas al mínimo.** Plan: `docs/sdd/roadmaps/TEMPLATE.md`. Spec: `docs/sdd/specs/TEMPLATE.md`.
    Las secciones que no aplican **se borran** — no se rellenan con justificaciones.
 7. **Escala según el tamaño.** Con **3 specs o menos**, escribirlas directo en esta misma pasada.
    Con más, delegar la autoría en subagentes **todos a la vez, sin esperas entre tandas** (las
@@ -52,7 +52,7 @@ doctrina, dos comandos que la orquestan por fases.
 1. **Leer** el milestone en `docs/prd.md` y los docs de `docs/arquitectura/`. Reflejar en 2-3
    frases qué se va a planear.
 2. **Preguntar (un bloque)** solo lo que el PRD y la arquitectura dejan ambiguo.
-3. **Escribir el plan** (`docs/sdd/plans/active/m<n>-<tema>.md` con la plantilla): objetivo,
+3. **Escribir el plan** (`docs/sdd/roadmaps/active/m<n>-<tema>.md` con la plantilla): objetivo,
    fuera de alcance, riesgos, reglas tocadas y la tabla de specs.
 4. **Escribir las specs** (`docs/sdd/specs/<ID>-<tema>.md` con la plantilla), directo o delegado
    según el punto 7.

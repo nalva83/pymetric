@@ -20,7 +20,7 @@ claro de "terminado"**, y cada etapa tiene un responsable del equipo de agentes.
 | 0 · Qué le ofrecés | **`/solucion <tipo>`** | Arquitecto de Soluciones | `docs/solucion.md`: el QUÉ del producto (opcional) |
 | 1 · El qué | **`/prd`** | Analista de Producto | `docs/prd.md`: qué construimos, en qué orden, y qué queda afuera |
 | 2 · El cómo | **`/arquitectura`** | Arquitecto | `docs/arquitectura/` (un doc por tema) + reglas numeradas en la constitución |
-| 3 · El orden | **`/roadmap M#`** | Planificador | El plan del milestone con su tabla de piezas (`plans/active/`) |
+| 3 · El orden | **`/roadmap M#`** | Planificador | El plan del milestone con su tabla de piezas (`roadmaps/active/`) |
 | 4 · Las instrucciones | **`/specs`** | Planificador | La ficha de cada pieza (`specs/`) |
 | 5 · La construcción | **`/implementar <ID>`** (o prosa: *"construí `<ID>`"*) | Programador (`builder`) | Código con las 3 verificaciones en verde, una pieza a la vez |
 | 6 · Publicar | **`/deploy`** | DevOps + Diseñador | Control listo-para-publicar y, con GO + confirmación, la app online |
@@ -30,13 +30,13 @@ un punto de retorno en Git antes de un cambio grande — siempre se puede volver
 
 ## Dos conceptos, un solo estado
 
-- **El plan** (`plans/active/<slug>.md`) es el índice de un milestone: qué piezas hay, en qué
+- **El plan** (`roadmaps/active/<slug>.md`) es el índice de un milestone: qué piezas hay, en qué
   orden, y **el estado de cada una — este es el ÚNICO lugar donde vive el estado**.
 - **La spec** (`specs/<ID>-<tema>.md`) es la ficha de UNA pieza: qué logra, cómo se comprueba,
   qué queda afuera. No lleva estado propio.
 
 IDs: `M#-##` (milestone del PRD + orden). Al cerrar un milestone, su plan se mueve a
-`plans/archive/`. Las specs terminadas no se borran: quedan como registro.
+`roadmaps/archive/`. Las specs terminadas no se borran: quedan como registro.
 
 ## Qué significa "terminado" (regla #5)
 

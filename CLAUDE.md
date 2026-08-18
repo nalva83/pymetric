@@ -40,7 +40,7 @@ Cada etapa tiene su responsable. Nombralos al invocarlos.
   `/specs` → `/implementar` → `/deploy`. Guía completa: `docs/sdd/README.md`. Si el owner no
   sabe qué toca: `/empezar`.
 - **El estado de las piezas vive en UN solo lugar:** la tabla del plan activo en
-  `docs/sdd/plans/active/`.
+  `docs/sdd/roadmaps/active/`.
 - **"Probalo vos" al cerrar cada milestone:** cuando la última pieza de un plan queda en ✅,
   levantá la app en background (`npm run dev` o equivalente) y entregale al owner el link listo
   (ej. `http://localhost:3000`) + qué probar en 1-2 frases. El owner nunca levanta servers. El

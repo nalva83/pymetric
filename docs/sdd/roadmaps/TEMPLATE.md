@@ -1,6 +1,6 @@
 <!--
 Plantilla de PLAN — el índice y el estado de un milestone. Copiala a
-docs/sdd/plans/active/m<n>-<tema>.md y completala. Un plan descompone UN milestone del PRD
+docs/sdd/roadmaps/active/m<n>-<tema>.md y completala. Un plan descompone UN milestone del PRD
 en specs; el detalle de cada spec vive en docs/sdd/specs/.
 LA TABLA DE ABAJO ES EL ÚNICO LUGAR DONDE VIVE EL ESTADO de las specs.
 -->
@@ -38,4 +38,4 @@ tiene que estar cubierta por al menos una fila.>
 - [ ] Las condiciones del milestone en `docs/prd.md` se cumplen y se pueden demostrar.
 - [ ] **El owner lo probó con sus ojos:** el agente le dejó la app levantada y el link servido,
       y él confirmó que lo que ve está bien.
-- [ ] Este plan movido a `docs/sdd/plans/archive/`.
+- [ ] Este plan movido a `docs/sdd/roadmaps/archive/`.

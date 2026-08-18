@@ -7,7 +7,7 @@ argument-hint: "[ruta del plan, o vacío = el plan activo]"
 
 Invocá la skill **`planner`** (Skill tool) y ejecutá su fase de SPECS sobre este plan:
 
-**$ARGUMENTS** (vacío = el plan de `docs/sdd/plans/active/`; si no hay ninguno, primero `/roadmap`)
+**$ARGUMENTS** (vacío = el plan de `docs/sdd/roadmaps/active/`; si no hay ninguno, primero `/roadmap`)
 
 - Escribí la ficha de cada fila de la tabla (`docs/sdd/specs/<ID>-<tema>.md` con la
   plantilla), heredando las respuestas de la ronda de preguntas del plan — no re-preguntes.

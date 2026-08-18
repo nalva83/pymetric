@@ -11,7 +11,7 @@ Orientá al owner en lenguaje llano, sin jerga. Corrés en el loop principal.
    - **Sí (proyecto virgen):** saludá y pedile la idea en sus palabras — qué quiere construir y
      para quién. Con eso, ofrecé arrancar con `/prd <su idea>`.
    - **No (proyecto en marcha):** leé `PROGRESS.md` y la tabla del plan activo
-     (`docs/sdd/plans/active/`), y resumí en 2-3 frases dónde está el proyecto.
+     (`docs/sdd/roadmaps/active/`), y resumí en 2-3 frases dónde está el proyecto.
 2. **Decí EL paso siguiente** — uno solo, respetando "una cosa a la vez": el comando exacto o la
    frase exacta a tipear (ej. *"construí M1-02"*), y qué va a obtener al correrlo.
 3. Si la verificación completa de `CLAUDE.md` está definida y hay código, corrélá y contá el
