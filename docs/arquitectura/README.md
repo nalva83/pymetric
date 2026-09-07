@@ -8,7 +8,7 @@
 
 | Tema | Documento | Reglas que numera |
 |---|---|---|
-| Stack, deploy y costo mensual | `stack.md` | — |
+| Stack y deploy | `stack.md` | — |
 | Modelo de datos (y aislamiento entre usuarios) | `modelo-de-datos.md` | #1 |
 | Secretos y claves | `secretos.md` | #2 |
 | Recorrido del usuario | `user-flow.md` | — |
@@ -16,6 +16,9 @@
 | Integraciones con IA + techo de gasto *(si aplica)* | `integraciones-ia.md` | #3 |
 | Integraciones con otros sistemas *(si aplica)* | `integraciones.md` | #4 |
 | Autenticación y permisos *(si aplica)* | `auth-y-permisos.md` | — |
+| Costo mensual estimado *(lo escribe `/costo`)* | `costos.md` | — |
+| Monitoreo de errores — Sentry *(si se instala, `/instalar-sentry`)* | `sentry.md` | — |
+| Analítica de producto — PostHog *(si se instala, `/instalar-posthog`)* | `posthog.md` | — |
 
 *(`/arquitectura` actualiza esta tabla al escribir: los condicionales que no aplican quedan
 marcados acá con una línea de por qué, sin crear el archivo.)*
